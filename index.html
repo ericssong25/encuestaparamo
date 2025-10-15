@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamic Satisfaction Survey</title>
+    <title>Encuesta de satisfacción - Páramo Creativo</title>
   </head>
   <body>
     <div id="root"></div>
     
-    <!-- Formulario oculto para Netlify Forms -->
-    <form name="encuesta-satisfaccion" netlify netlify-honeypot="bot-field" hidden>
+    <!-- Formulario para Netlify Forms (visible durante build) -->
+    <form name="encuesta-satisfaccion" netlify netlify-honeypot="bot-field" style="display: none;">
       <input type="text" name="name" />
       <input type="number" name="customerService" />
       <textarea name="customerServiceComment"></textarea>
