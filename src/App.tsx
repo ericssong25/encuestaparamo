@@ -180,7 +180,7 @@ function App() {
             Encuesta de Satisfacción
           </h1>
           <p className="text-white/90 font-garet text-lg">
-            Tu opinión nos ayuda a mejorar
+            Tu opinión nos ayuda a mejorar (3-5 minutos)
           </p>
         </div>
 
