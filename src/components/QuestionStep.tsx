@@ -19,7 +19,7 @@ export default function QuestionStep({
 }: QuestionStepProps) {
   return (
     <div className="w-full max-w-3xl mx-auto animate-fade-in">
-      <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+      <div className="bg-white rounded-3xl shadow-card p-8 md:p-12">
         <div className="space-y-8">
           {children}
 

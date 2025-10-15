@@ -3,7 +3,7 @@
 export default function ThankYouScreen() {
   return (
     <div className="w-full max-w-3xl mx-auto animate-fade-in">
-      <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 text-center">
+      <div className="bg-white rounded-3xl shadow-card p-8 md:p-12 text-center">
         <div className="space-y-6">
           <div className="flex justify-center">
             <div className="w-24 h-24 rounded-full gradient-primary flex items-center justify-center animate-bounce-slow">
