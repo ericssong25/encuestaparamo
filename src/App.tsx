@@ -84,17 +84,40 @@ function App() {
 
   // Función para enviar datos a Netlify Forms
   const submitToNetlifyForms = async (data: SurveyData) => {
+    // Obtener IP del usuario
+    let userIP = 'No disponible';
+    try {
+      const ipResponse = await fetch('https://api.ipify.org?format=json');
+      const ipData = await ipResponse.json();
+      userIP = ipData.ip;
+    } catch (error) {
+      console.error('Error al obtener IP:', error);
+    }
+
+    // Formatear fecha y hora legible
+    const now = new Date();
+    const fechaHora = now.toLocaleString('es-ES', {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    });
+
     const formData = new FormData();
     formData.append('form-name', 'encuesta-satisfaccion');
-    formData.append('name', data.name);
-    formData.append('customerService', data.customerService.toString());
-    formData.append('customerServiceComment', data.customerServiceComment || '');
-    formData.append('designQuality', data.designQuality.toString());
-    formData.append('designQualityComment', data.designQualityComment || '');
-    formData.append('challenges', data.challenges || '');
-    formData.append('recommendation', data.recommendation.toString());
-    formData.append('improvements', data.improvements || '');
-    formData.append('timestamp', new Date().toISOString());
+    formData.append('nombre', data.name);
+    formData.append('atencion-cliente', data.customerService.toString());
+    formData.append('comentario-atencion', data.customerServiceComment || 'Sin comentarios');
+    formData.append('diseno-calidad', data.designQuality.toString());
+    formData.append('comentario-diseno', data.designQualityComment || 'Sin comentarios');
+    formData.append('retos-fricciones', data.challenges || 'Sin respuesta');
+    formData.append('recomendacion', data.recommendation.toString());
+    formData.append('mejoras-sugeridas', data.improvements || 'Sin respuesta');
+    formData.append('fecha-hora', fechaHora);
+    formData.append('direccion-ip', userIP);
 
     try {
       await fetch('/', {

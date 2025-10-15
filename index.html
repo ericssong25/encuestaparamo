@@ -17,15 +17,36 @@
     
     <!-- Formulario para Netlify Forms (visible durante build) -->
     <form name="encuesta-satisfaccion" netlify netlify-honeypot="bot-field" style="display: none;">
-      <input type="text" name="name" />
-      <input type="number" name="customerService" />
-      <textarea name="customerServiceComment"></textarea>
-      <input type="number" name="designQuality" />
-      <textarea name="designQualityComment"></textarea>
-      <textarea name="challenges"></textarea>
-      <input type="number" name="recommendation" />
-      <textarea name="improvements"></textarea>
-      <input type="text" name="timestamp" />
+      <label><strong>Nombre:</strong></label>
+      <input type="text" name="nombre" />
+      
+      <label><strong>Atención al Cliente (1-10):</strong></label>
+      <input type="number" name="atencion-cliente" />
+      
+      <label><strong>Comentario sobre Atención al Cliente:</strong></label>
+      <textarea name="comentario-atencion"></textarea>
+      
+      <label><strong>Valoración del Diseño y Edición (1-10):</strong></label>
+      <input type="number" name="diseno-calidad" />
+      
+      <label><strong>Comentario sobre Diseño:</strong></label>
+      <textarea name="comentario-diseno"></textarea>
+      
+      <label><strong>Retos o Puntos de Fricción:</strong></label>
+      <textarea name="retos-fricciones"></textarea>
+      
+      <label><strong>Probabilidad de Recomendación (1-10):</strong></label>
+      <input type="number" name="recomendacion" />
+      
+      <label><strong>Aspectos a Mejorar:</strong></label>
+      <textarea name="mejoras-sugeridas"></textarea>
+      
+      <label><strong>Fecha y Hora:</strong></label>
+      <input type="text" name="fecha-hora" />
+      
+      <label><strong>Dirección IP:</strong></label>
+      <input type="text" name="direccion-ip" />
+      
       <input type="text" name="bot-field" />
     </form>
     

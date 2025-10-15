@@ -9,8 +9,8 @@ export default {
         dark: '#12173b',
       },
       fontFamily: {
-        creato: ['Creato Display', 'serif'],
-        garet: ['Garet', 'sans-serif'],
+        creato: ['Creato Display', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
+        garet: ['Garet', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
       },
     },
   },
