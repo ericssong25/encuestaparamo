@@ -60,7 +60,8 @@ function App() {
       // Scroll hacia arriba al cambiar de paso
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (currentStep === totalSteps) {
-      await sendSurveyEmail(surveyData);
+      // Enviar formulario a Netlify Forms
+      await submitToNetlifyForms(surveyData);
       setIsSubmitted(true);
     }
   };
@@ -80,6 +81,32 @@ function App() {
   const canProceedStep5 = surveyData.recommendation > 0;
   const canProceedStep6 = true;
   const canProceedStep7 = captchaVerified;
+
+  // Función para enviar datos a Netlify Forms
+  const submitToNetlifyForms = async (data: SurveyData) => {
+    const formData = new FormData();
+    formData.append('form-name', 'encuesta-satisfaccion');
+    formData.append('name', data.name);
+    formData.append('customerService', data.customerService.toString());
+    formData.append('customerServiceComment', data.customerServiceComment || '');
+    formData.append('designQuality', data.designQuality.toString());
+    formData.append('designQualityComment', data.designQualityComment || '');
+    formData.append('challenges', data.challenges || '');
+    formData.append('recommendation', data.recommendation.toString());
+    formData.append('improvements', data.improvements || '');
+    formData.append('timestamp', new Date().toISOString());
+
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+      console.log('Formulario enviado exitosamente a Netlify Forms');
+    } catch (error) {
+      console.error('Error al enviar formulario:', error);
+    }
+  };
 
   if (isLoading) {
     return (
