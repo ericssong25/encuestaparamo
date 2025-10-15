@@ -16,7 +16,7 @@
 
 @layer utilities {
   .gradient-primary {
-    background: linear-gradient(135deg, #5a2fb8, #a855f7);
+    background: linear-gradient(135deg, #4c1d95, #7c3aed);
     position: relative;
   }
   
