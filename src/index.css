@@ -58,6 +58,10 @@
     pointer-events: none;
   }
 
+  .gradient-progress {
+    background: linear-gradient(135deg, #8b5cf6, #c084fc);
+  }
+
   .gradient-animated {
     background: linear-gradient(90deg, #dc89ff 0%, #b1a9e5 25%, #7546ed 50%, #dc89ff 75%, #b1a9e5 100%);
     background-size: 200% 100%;
