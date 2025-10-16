@@ -21,26 +21,32 @@ export default function ThankYouScreen() {
             Hemos recibido tus respuestas. Tu opinión es muy valiosa para nosotros y nos ayuda a mejorar continuamente nuestros servicios.
           </p>
 
-          {/* Flyer del Plan de Referidos */}
+          {/* Layout horizontal: Texto + Flyer */}
           <div className="pt-6">
-            <div className="bg-gray-100 rounded-2xl shadow-card p-6 max-w-md mx-auto">
-              <div className="aspect-[4/5] bg-white rounded-xl shadow-sm border-2 border-dashed border-gray-300 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <svg className="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <p className="text-sm font-garet font-medium mb-2">Flyer Plan de Referidos</p>
-                  <p className="text-xs text-gray-400">Agregar imagen aquí</p>
+            <div className="bg-white rounded-2xl shadow-card p-6 max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                {/* Columna izquierda - Texto */}
+                <div className="text-center md:text-left">
+                  <div className="inline-block px-8 py-3 gradient-animated rounded-xl">
+                    <p className="text-white font-garet font-medium">
+                      Tu feedback hace la diferencia
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Columna derecha - Flyer */}
+                <div className="flex justify-center">
+                  <div className="bg-gray-100 rounded-xl shadow-sm p-4 max-w-xs">
+                    <div className="aspect-[4/5] bg-white rounded-lg shadow-sm overflow-hidden">
+                      <img 
+                        src="/referidos.jpg" 
+                        alt="Plan de Referidos - Páramo Creativo"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="pt-6">
-            <div className="inline-block px-8 py-3 gradient-animated rounded-xl">
-              <p className="text-white font-garet font-medium">
-                Tu feedback hace la diferencia
-              </p>
             </div>
           </div>
         </div>

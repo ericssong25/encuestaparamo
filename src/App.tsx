@@ -165,7 +165,7 @@ function App() {
     return (
       <div className="min-h-screen gradient-primary flex items-center justify-center p-4">
         <ThankYouScreen />
-        <footer className="absolute bottom-2 text-center text-white/80 text-sm font-garet">
+        <footer className="absolute bottom-6 text-center text-white/80 text-sm font-garet">
           © Páramo Creativo 2023
         </footer>
       </div>
