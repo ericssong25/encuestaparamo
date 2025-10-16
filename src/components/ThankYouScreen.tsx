@@ -16,9 +16,9 @@ export default function ThankYouScreen() {
             {/* Columna izquierda - Contenido principal */}
             <div className="text-center md:text-left space-y-6">
               <div className="flex justify-center md:justify-start">
-                <div className="w-24 h-24 rounded-full gradient-primary flex items-center justify-center animate-bounce-slow">
-                  <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <div className="w-24 h-24 flex items-center justify-center animate-bounce-slow">
+                  <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
               </div>
