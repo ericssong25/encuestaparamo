@@ -17,7 +17,7 @@ export default function ThankYouScreen() {
             <div className="text-center md:text-left space-y-6">
               <div className="flex justify-center md:justify-start">
                 <div className="w-24 h-24 flex items-center justify-center animate-bounce-slow">
-                  <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
+                  <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -42,7 +42,7 @@ export default function ThankYouScreen() {
             
             {/* Columna derecha - Flyer */}
             <div className="flex justify-center">
-              <div className="bg-gray-100 rounded-xl shadow-sm p-4 max-w-sm">
+              <div className="bg-gray-50 rounded-xl shadow-sm p-3 max-w-sm">
                 <div className="aspect-[4/5] bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300" onClick={openModal}>
                   <img 
                     src="/referidos.jpg" 
