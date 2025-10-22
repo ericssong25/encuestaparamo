@@ -31,11 +31,26 @@ export default function ThankYouScreen() {
                 Hemos recibido tus respuestas. Tu opinión es muy valiosa para nosotros y nos ayuda a mejorar continuamente nuestros servicios.
               </p>
 
-              <div className="pt-4">
+              <div className="pt-4 space-y-4">
                 <div className="inline-block px-8 py-3 gradient-animated rounded-xl">
                   <p className="text-white font-garet font-medium">
                     Tu feedback hace la diferencia
                   </p>
+                </div>
+                
+                {/* Botón para ver servicios */}
+                <div className="pt-2">
+                  <a 
+                    href="https://agenciaparamo.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-primary text-primary font-garet font-semibold rounded-xl hover:bg-primary hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    Conoce todos nuestros servicios
+                  </a>
                 </div>
               </div>
             </div>
